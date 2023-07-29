@@ -30,10 +30,10 @@ ggsave("./results/elbow_plot.png", plot = elbow_plot, dpi = 300)
 
 # Cluster 
 clusters <- kmeans(dataset, centers = 6, iter.max= 10)
-write.csv(clusters$centers, file = 'clusters.csv')
-dataset <- dataset |> dplyr::mutate(clusters = clusters$cluster)
+saveRDS(clusters, file = "results/model.rds")
 
 # Plot the cluster 
+dataset <- dataset |> dplyr::mutate(clusters = clusters$cluster)
 cluster_plot = clusplot(dataset, 
                         clusters$cluster, 
                         color = TRUE, 
