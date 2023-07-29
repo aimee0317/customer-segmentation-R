@@ -1,15 +1,5 @@
-# Read data 
-data <- read.csv('data/raw/data.csv')
-
-# Simplify the data set 
-data <- data[, 2:9]
-summary(data)
-
-unique(data$Profession)
-
-# Transform blanks into NAs
-data[data == ""] <- NA 
-data <- data[complete.cases(data), ]
+# Read processed data 
+data <- read_csv("./data/processed/clean_data.csv", show_col_types = FALSE)
 
 # Start building dataset 
 library(dplyr)
