@@ -2,7 +2,11 @@
 - Author: Amelia Tang 
 
 ## About
-TBU
+
+This project aims to identify customer segments using a sample customer information dataset. The dataset contains 6718 rows of non-null data. To conduct the customer segmentation analysis, I utilized the k-means clustering algorithm and implemented the algorithm in R. 
+
+## Reports 
+[EDA Report using `ggplot2`]('doc/Customer_Segmentation_EDA_Report.pdf')
 
 ## Usage
 
