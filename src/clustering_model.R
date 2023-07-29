@@ -21,6 +21,7 @@ character <- dummy_cols(character,
 # Finalize the data set 
 dataset <- cbind(dataset, character[, 6:18])
 dataset[, 1:16] <- scale(dataset[, 1:16])
+write.csv(dataset, file = "data/processed/data_for_clusters.csv", row.names = FALSE)
 
 # Determining the amounts of segments 
 elbow_plot <- fviz_nbclust(dataset, kmeans, method = "wss") +
