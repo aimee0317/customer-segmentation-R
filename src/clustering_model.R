@@ -4,8 +4,6 @@ library(tidyverse)
 library(fastDummies)
 library(factoextra)
 library(cluster)
-library(magick)
-
 
 # Read processed data 
 data <- read_csv("./data/processed/clean_data.csv", show_col_types = FALSE)
@@ -21,19 +19,19 @@ character <- dummy_cols(character,
 # Finalize the data set 
 dataset <- cbind(dataset, character[, 6:18])
 dataset[, 1:16] <- scale(dataset[, 1:16])
-write.csv(dataset, file = "data/processed/data_for_clusters.csv", row.names = FALSE)
 
 # Determining the amounts of segments 
 elbow_plot <- fviz_nbclust(dataset, kmeans, method = "wss") +
   labs(subtitle = 'Elbow Method')
 ggsave("./results/elbow_plot.png", plot = elbow_plot, dpi = 300)
 
-# Cluster 
+# Kmeans Clustering 
 clusters <- kmeans(dataset, centers = 6, iter.max= 10)
 saveRDS(clusters, file = "results/model.rds")
 
 # Plot the cluster 
 dataset <- dataset |> dplyr::mutate(clusters = clusters$cluster)
+write.csv(dataset, file = "data/processed/clusters.csv", row.names = FALSE)
 cluster_plot = clusplot(dataset, 
                         clusters$cluster, 
                         color = TRUE, 
