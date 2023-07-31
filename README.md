@@ -24,8 +24,22 @@ After clustering the data, the clusters are visualized using `clusplot`. Clusplo
 
 There are two suggested ways to run this analysis:
 
-#### 1. Using Docker
-TBU
+#### Using Docker
+To replicate the analysis, install
+[Docker](https://www.docker.com/get-started). 
+
+Then clone this GitHub
+repository and run the following command at the command line/terminal
+from the root directory of this project:
+
+    docker run --rm -v /$(pwd):/home/rstudio/x make -C /home/rstudio/x all
+
+To reset the repo to a clean state, with no intermediate or results
+files, run the following command at the command line/terminal from the
+root directory of this project:
+
+    docker run --rm -v /$(pwd):/home/rstudio/x make -C /home/rstudio/x clean
+    
 #### Using Makefile (Without Docker)
 To replicate the analysis, clone this GitHub repository, install the
 dependencies listed below, and run the following
@@ -48,3 +62,6 @@ R version 4.2.3 (2023-03-15) and R packages:
 - fastDummies 
 - factoextra 
 - cluster
+- knitr
+- ggthemes 
+- kableExtra
