@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2023-07-30T22:01:26.044Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="3ED_lqWUBDIrEc3vLaiJ" version="21.6.2" type="device">
+  <diagram name="Page-1" id="cAtHJU6rXODrXcgIjBHh">
+    <mxGraphModel dx="920" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nQja2BUuHiamsgCxEYhC-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nQja2BUuHiamsgCxEYhC-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-3" value="Step 1:&amp;nbsp;Initialization" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-7" value="Randomly select K data points from the dataset to be the initial centroids of the clusters." style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nQja2BUuHiamsgCxEYhC-8" target="nQja2BUuHiamsgCxEYhC-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-8" value="Step 2:&amp;nbsp;Assignment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="190" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-9" value="Step 3: Update" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="400" y="190" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-11" value="Assign each data point to the cluster whose centroid is closest to it. This is typically done using a distance metric like Euclidean distance." style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="290" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-12" value="Recalculate the centroids of each cluster based on the mean of the data points currently assigned to that cluster." style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="290" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-15" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="380" as="sourcePoint" />
+            <mxPoint x="300" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="480" />
+              <mxPoint x="300" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-16" value="Repeat" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1" connectable="0" vertex="1" parent="nQja2BUuHiamsgCxEYhC-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-19" value="Steps 2 and 3 are repeated until the centroids no longer change significantly or until a maximum number of iterations is reached." style="text;html=1;strokeColor=#36393d;fillColor=#eeeeee;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="500" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nQja2BUuHiamsgCxEYhC-21" target="nQja2BUuHiamsgCxEYhC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nQja2BUuHiamsgCxEYhC-21" value="Step 0: Specify the number of clusters K and the max number of iterations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="140" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
