@@ -31,7 +31,7 @@ saveRDS(clusters, file = "results/model.rds")
 
 # Plot the cluster 
 dataset <- dataset |> dplyr::mutate(clusters = clusters$cluster)
-write.csv(dataset, file = "data/processed/clusters.csv", row.names = FALSE)
+write.csv(dataset, file = "results/clusters.csv", row.names = FALSE)
 cluster_plot = clusplot(dataset, 
                         clusters$cluster, 
                         color = TRUE, 
