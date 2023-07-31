@@ -32,13 +32,17 @@ Then clone this GitHub
 repository and run the following command at the command line/terminal
 from the root directory of this project:
 
-    docker run --rm -v /$(pwd):/home/rstudio/x make -C /home/rstudio/x all
+```
+docker run -v "$(pwd)":/home/docker -w /home/docker -u docker customer_segmentation_image:v1 make all
+```
 
 To reset the repo to a clean state, with no intermediate or results
 files, run the following command at the command line/terminal from the
 root directory of this project:
 
-    docker run --rm -v /$(pwd):/home/rstudio/x make -C /home/rstudio/x clean
+```
+docker run -v "$(pwd)":/home/docker -w /home/docker -u docker customer_segmentation_image:v1 make clean
+```
     
 #### Using Makefile (Without Docker)
 To replicate the analysis, clone this GitHub repository, install the
