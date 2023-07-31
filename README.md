@@ -60,8 +60,11 @@ root directory of this project:
 
 ## Dependencies
 R version 4.2.3 (2023-03-15) and R packages:
-- tidyverse 
+- readr
+- tidyr
+- dplyr
 - ggplot2 
+- magrittr
 - fastDummies 
 - factoextra 
 - cluster

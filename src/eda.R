@@ -1,6 +1,8 @@
 # Load libraries 
-library(tidyverse)
+library(readr)
+library(magrittr)
 library(ggplot2)
+library(dplyr)
 
 # Load the cleaned data
 clean_data <- read_csv("./data/processed/clean_data.csv", show_col_types = FALSE)

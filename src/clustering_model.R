@@ -1,5 +1,6 @@
 # Load Libraries 
-library(tidyverse)
+library(readr)
+library(tidyr)
 library(fastDummies)
 library(factoextra)
 library(cluster)
