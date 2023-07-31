@@ -26,8 +26,25 @@ There are two suggested ways to run this analysis:
 
 #### 1. Using Docker
 TBU
-#### 2. Without using Docker
-TBU
+#### Using Makefile (Without Docker)
+To replicate the analysis, clone this GitHub repository, install the
+dependencies listed below, and run the following
+command at the command line/terminal from the root directory of this
+project:
+
+    make all
+
+To reset the repo to a clean state, with no intermediate or results
+files, run the following command at the command line/terminal from the
+root directory of this project:
+
+    make clean
 
 ## Dependencies
-TBU 
+R version 4.2.3 (2023-03-15) and R packages:
+- tidyverse 
+- ggplot2 
+- dplyr 
+- fastDummies 
+- factoextra 
+- cluster
