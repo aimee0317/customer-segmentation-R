@@ -12,7 +12,6 @@ knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
 library(kableExtra)
 library(tidyverse)
-library(scales)
 ```
 
 ## Summary 
