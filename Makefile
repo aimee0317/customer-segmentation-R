@@ -1,6 +1,5 @@
 # Customer Segmentation Data Pipe 
 # Author: Amelia Tang
-# date: 2020-01-17
 
 # Make all 
 all: doc/customer_segmentation_report.html
