@@ -1,14 +1,9 @@
 # Docker file for Customer Segmentation Project
 # Amelia Tang
 
-# use rocker/tidyverse as the base image and
-FROM rocker/tidyverse
+# use arm64v8/r-base as the base image 
+FROM docker pull arm64v8/r-base
 
-# install R packages
-RUN apt-get update -qq && apt-get -y --no-install-recommends install \
-  && install2.r --error \
-    --deps TRUE \
-    
+# install R packages using install.packages
+RUN Rscript -e "install.packages(c('kableExtra', 'tidyverse', 'ggplot2', 'fastDummies', 'factoextra', 'cluster', 'knitr', 'ggthemes')"
 
-# install the kableExtra package using install.packages
-RUN Rscript -e "install.packages('kableExtra')"

@@ -58,7 +58,6 @@ root directory of this project:
 R version 4.2.3 (2023-03-15) and R packages:
 - tidyverse 
 - ggplot2 
-- dplyr 
 - fastDummies 
 - factoextra 
 - cluster
