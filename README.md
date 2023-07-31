@@ -13,38 +13,12 @@ After clustering the data, the clusters are visualized using `clusplot`. Clusplo
 <br>
 <img src="results/cluster_for_readme.png" alt="cluster plot" width="500">
 
-
-
 ## Reports 
 [EDA Report using ggplot2](doc/Customer_Segmentation_EDA_Report.pdf)
 <br>
 [Customer Segmentation using K-means Clustering Project Report](doc/Customer_Segmentation_Project_Report.pdf)
 
 ## Usage
-
-There are two suggested ways to run this analysis:
-
-#### Using Docker
-To replicate the analysis, install
-[Docker](https://www.docker.com/get-started). 
-
-Then clone this GitHub
-repository and run the following command at the command line/terminal
-from the root directory of this project:
-
-```
-docker run -v "$(pwd)":/home/docker -w /home/docker -u docker customer_segmentation_image:v1 make all
-```
-
-To reset the repo to a clean state, with no intermediate or results
-files, run the following command at the command line/terminal from the
-root directory of this project:
-
-```
-docker run -v "$(pwd)":/home/docker -w /home/docker -u docker customer_segmentation_image:v1 make clean
-```
-    
-#### Using Makefile (Without Docker)
 To replicate the analysis, clone this GitHub repository, install the
 dependencies listed below, and run the following
 command at the command line/terminal from the root directory of this
